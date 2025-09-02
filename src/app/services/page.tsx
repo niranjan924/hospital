@@ -13,7 +13,19 @@ export default function ServicesPage() {
   return (
     <>
       <h1>Our Services</h1>
-      <p className="muted">Comprehensive care across key medical specialties.</p>
+      <p className="lead">Comprehensive care across key medical specialties.</p>
+
+      <section className="section-alt">
+        <div className="container text-center">
+          <h2>Featured Care Programs</h2>
+          <p className="muted">Integrated, multidisciplinary care for complex conditions.</p>
+          <div className="card-grid">
+            <div className="card"><h3>Heart Health Program</h3><p className="muted">From prevention to advanced interventions.</p></div>
+            <div className="card"><h3>Joint & Spine Center</h3><p className="muted">Personalized plans to get you moving again.</p></div>
+            <div className="card"><h3>Cancer Care Institute</h3><p className="muted">Compassionate, coordinated oncology services.</p></div>
+          </div>
+        </div>
+      </section>
       <div className="card-grid">
         {services.map(s => (
           <div className="card" key={s.title}>
@@ -22,6 +34,14 @@ export default function ServicesPage() {
           </div>
         ))}
       </div>
+
+      <section className="section">
+        <div className="card">
+          <h3>Not sure which service you need?</h3>
+          <p className="muted">Talk to our referral team and we’ll guide you to the right clinic.</p>
+          <a className="btn" href="/contact">Get Guidance</a>
+        </div>
+      </section>
     </>
   );
 }
