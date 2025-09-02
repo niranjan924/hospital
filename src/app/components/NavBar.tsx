@@ -41,6 +41,7 @@ export default function NavBar() {
           <div className="nav-links">
             <Link href="/services">Services</Link>
             <Link href="/about">About</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
           </div>
           <Link className="btn cta" href="/contact">Book Appointment</Link>
@@ -52,6 +53,7 @@ export default function NavBar() {
           <div className="stack">
             <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
             <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/blog" onClick={() => setOpen(false)}>Blog</Link>
             <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
             <Link className="btn cta btn-block" href="/contact" onClick={() => setOpen(false)}>Book Appointment</Link>
           </div>
