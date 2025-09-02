@@ -12,6 +12,7 @@ export default function Footer() {
             <div className="stack">
               <a href="/services">Services</a>
               <a href="/about">About</a>
+              <a href="/blog">Blog</a>
               <a href="/contact">Contact</a>
             </div>
           </div>
