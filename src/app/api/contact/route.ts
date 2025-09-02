@@ -1,5 +1,5 @@
 export const runtime = 'nodejs';
-import nodemailer from 'nodemailer';
+import nodemailer, { Transporter } from 'nodemailer';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     const smtpPass = process.env.SMTP_PASS;
     const toEmail = process.env.TO_EMAIL || 'niranjan.salihundam@gmail.com';
 
-    let transporter: any;
+    let transporter: Transporter;
     if (!smtpHost || !smtpUser || !smtpPass) {
       if (process.env.NODE_ENV !== 'production') {
         const testAccount = await nodemailer.createTestAccount();

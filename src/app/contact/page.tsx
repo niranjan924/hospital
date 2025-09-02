@@ -20,7 +20,7 @@ export default function ContactPage() {
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
       setStatus('Message sent. We will get back to you soon.');
       form.reset();
-    } catch (e) {
+    } catch {
       setStatus('Sorry, there was a problem sending your message.');
     } finally {
       setSubmitting(false);
